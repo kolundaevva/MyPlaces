@@ -9,12 +9,7 @@ import UIKit
 
 class MainViewController: UITableViewController {
   
-  let restaurantNames = [
-      "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
-      "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
-      "Speak Easy", "Morris Pub", "Вкусные истории",
-      "Классик", "Love&Life", "Шок", "Бочка"
-  ]
+  let places = Place.getPlaces()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,22 +18,22 @@ class MainViewController: UITableViewController {
   // MARK: - Table view data source
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    restaurantNames.count
+    places.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
 
-    cell.nameLabel.text = restaurantNames[indexPath.row]
-    cell.imageOfPlace.image = UIImage(named: restaurantNames[indexPath.row])
+    cell.nameLabel.text = places[indexPath.row].name
+    cell.locationLabel.text = places[indexPath.row].location
+    cell.typeLabel.text = places[indexPath.row].type
+    cell.imageOfPlace.image = UIImage(named: places[indexPath.row].image)
+    
     cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.height / 2
     
     return cell
   }
   
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 85
-  }
   /*
    // MARK: - Navigation
    
@@ -48,5 +43,7 @@ class MainViewController: UITableViewController {
    // Pass the selected object to the new view controller.
    }
    */
+  
+  @IBAction func cancelAction(_ segue: UIStoryboardSegue) {}
   
 }
