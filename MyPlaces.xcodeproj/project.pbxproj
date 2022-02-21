@@ -15,6 +15,7 @@
 		479201DC27C14E5400931918 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479201DB27C14E5300931918 /* MainViewController.swift */; };
 		47B459F027C25363002DC5C2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B459EF27C25363002DC5C2 /* CustomTableViewCell.swift */; };
 		47B459F227C25A97002DC5C2 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B459F127C25A97002DC5C2 /* PlaceModel.swift */; };
+		47B459F427C29746002DC5C2 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B459F327C29745002DC5C2 /* NewPlaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		479201DB27C14E5300931918 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		47B459EF27C25363002DC5C2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		47B459F127C25A97002DC5C2 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		47B459F327C29745002DC5C2 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				479201C927C14DC700931918 /* SceneDelegate.swift */,
 				479201DB27C14E5300931918 /* MainViewController.swift */,
 				47B459EF27C25363002DC5C2 /* CustomTableViewCell.swift */,
+				47B459F327C29745002DC5C2 /* NewPlaceViewController.swift */,
 				47B459F127C25A97002DC5C2 /* PlaceModel.swift */,
 				479201CD27C14DC700931918 /* Main.storyboard */,
 				479201D027C14DCA00931918 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479201DC27C14E5400931918 /* MainViewController.swift in Sources */,
+				47B459F427C29746002DC5C2 /* NewPlaceViewController.swift in Sources */,
 				479201C827C14DC700931918 /* AppDelegate.swift in Sources */,
 				47B459F227C25A97002DC5C2 /* PlaceModel.swift in Sources */,
 				47B459F027C25363002DC5C2 /* CustomTableViewCell.swift in Sources */,
@@ -297,6 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27TP8KZ84U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -324,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27TP8KZ84U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
