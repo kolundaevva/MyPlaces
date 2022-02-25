@@ -39,10 +39,29 @@ class MainViewController: UITableViewController {
     return cell
   }
   
+  // MARK: - Table view delegate
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == UITableViewCell.EditingStyle.delete {
+      StorageManager.deleteObject(places[indexPath.row])
+      tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+  }
+  
+  //MARK: - Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showDetail" {
+      guard let newPlaceVC = segue.destination as? NewPlaceViewController else { return }
+      guard let indexPath = tableView.indexPathForSelectedRow else { return }
+      newPlaceVC.currentPlace = places[indexPath.row]
+    }
+  }
+  
   @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
     guard let newPlaceVC = segue.source as? NewPlaceViewController else { return }
     
-    newPlaceVC.saveNewPlace()
+    newPlaceVC.savePlace()
     tableView.reloadData()
   }
   
