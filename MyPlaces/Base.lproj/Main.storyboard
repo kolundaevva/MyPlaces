@@ -145,6 +145,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="Rh0-jv-gNn">
+                                        <rect key="frame" x="0.0" y="519.5" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rh0-jv-gNn" id="20f-mI-bHO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eaP-QR-L4T" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eaP-QR-L4T" firstAttribute="centerY" secondItem="20f-mI-bHO" secondAttribute="centerY" id="H6g-KY-FKF"/>
+                                                <constraint firstItem="eaP-QR-L4T" firstAttribute="centerX" secondItem="20f-mI-bHO" secondAttribute="centerX" id="ata-qj-tYS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -170,6 +187,7 @@
                         <outlet property="placeLocation" destination="bnR-Bt-b5b" id="5VC-GM-vKF"/>
                         <outlet property="placeName" destination="zkj-Xm-HOM" id="FYz-lB-7JN"/>
                         <outlet property="placeType" destination="I3s-O4-6wm" id="DDn-Ae-MLE"/>
+                        <outlet property="ratingContol" destination="eaP-QR-L4T" id="fOk-Rf-Y95"/>
                         <outlet property="saveButton" destination="817-xJ-dKe" id="WIn-rt-F0a"/>
                     </connections>
                 </tableViewController>
@@ -343,6 +361,11 @@
             <point key="canvasLocation" x="1974" y="-537"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="eaP-QR-L4T">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="PlT-Uo-kkU"/>
     </inferredMetricsTieBreakers>
