@@ -35,6 +35,24 @@ class NewPlaceViewController: UITableViewController {
     }
   }
   
+  //MARK: Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard
+      let identifire = segue.identifier,
+      let mapVC = segue.destination as? MapViewController
+      else { return }
+    
+    mapVC.incomeSegueIdentifire = identifire
+    mapVC.mapViewControllerDelegate = self
+    
+    if identifire == "showMap" {
+      mapVC.place.name = placeName.text!
+      mapVC.place.location = placeLocation.text
+      mapVC.place.type = placeType.text
+      mapVC.place.imageData = imageOfPlace.image?.pngData()
+    }
+  }
+  
   func savePlace() {
     let imageData = imageOfPlace.image?.pngData()
     let newPlace = Place(name: placeName.text!, location: placeLocation.text, type: placeType.text, imageData: imageData, rating: Double(ratingContol.rating))
@@ -136,5 +154,11 @@ extension NewPlaceViewController {
     actionSheet.addAction(cancel)
     
     present(actionSheet, animated: true)
+  }
+}
+
+extension NewPlaceViewController: MapViewControllerDelegate {
+  func getAddress(_ address: String?) {
+    placeLocation.text = address
   }
 }

@@ -10,6 +10,7 @@
 		0D98FDDA6CDD7D569656E1A5 /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B195DF97B235956EAD8A026 /* Pods_MyPlaces.framework */; };
 		47370CCA27CFC024008BFFE0 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47370CC927CFC024008BFFE0 /* RatingControl.swift */; };
 		47695C8527C64CE700838465 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47695C8427C64CE700838465 /* StorageManager.swift */; };
+		4772D20C27D61E07004A2018 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4772D20B27D61E07004A2018 /* MapViewController.swift */; };
 		479201C827C14DC700931918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479201C727C14DC700931918 /* AppDelegate.swift */; };
 		479201CA27C14DC700931918 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479201C927C14DC700931918 /* SceneDelegate.swift */; };
 		479201CF27C14DC700931918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479201CD27C14DC700931918 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		0B195DF97B235956EAD8A026 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47370CC927CFC024008BFFE0 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		47695C8427C64CE700838465 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4772D20B27D61E07004A2018 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		479201C427C14DC700931918 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479201C727C14DC700931918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479201C927C14DC700931918 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				479201C927C14DC700931918 /* SceneDelegate.swift */,
 				479201DB27C14E5300931918 /* MainViewController.swift */,
 				47B459F327C29745002DC5C2 /* NewPlaceViewController.swift */,
+				4772D20B27D61E07004A2018 /* MapViewController.swift */,
 				47B459F127C25A97002DC5C2 /* PlaceModel.swift */,
 				47695C8427C64CE700838465 /* StorageManager.swift */,
 				47B459EF27C25363002DC5C2 /* CustomTableViewCell.swift */,
@@ -225,6 +228,7 @@
 				47B459F427C29746002DC5C2 /* NewPlaceViewController.swift in Sources */,
 				479201C827C14DC700931918 /* AppDelegate.swift in Sources */,
 				47695C8527C64CE700838465 /* StorageManager.swift in Sources */,
+				4772D20C27D61E07004A2018 /* MapViewController.swift in Sources */,
 				47370CCA27CFC024008BFFE0 /* RatingControl.swift in Sources */,
 				47B459F227C25A97002DC5C2 /* PlaceModel.swift in Sources */,
 				47B459F027C25363002DC5C2 /* CustomTableViewCell.swift in Sources */,

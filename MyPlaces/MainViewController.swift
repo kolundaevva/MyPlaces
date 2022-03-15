@@ -54,7 +54,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITabBarDeleg
   func tableView(_ tabelView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
   }
-  
+    
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
     
@@ -70,6 +70,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITabBarDeleg
     cell.locationLabel.text = place.location
     cell.typeLabel.text = place.type
     cell.imageOfPlace.image = UIImage(data: place.imageData!)
+    cell.ratingControl.rating = Int(place.rating)
     
     cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.height / 2
     
