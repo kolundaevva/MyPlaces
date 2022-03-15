@@ -15,7 +15,7 @@ class CustomTableViewCell: UITableViewCell {
   @IBOutlet var typeLabel: UILabel!
   @IBOutlet var ratingControl: RatingControl! {
     didSet {
-      
+      ratingControl.isUserInteractionEnabled = false
     }
   }
   

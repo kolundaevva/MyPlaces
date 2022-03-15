@@ -50,10 +50,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITabBarDeleg
       return places.isEmpty ? 0 : places.count
     }
   }
-  
-  func tableView(_ tabelView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-  }
     
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
@@ -92,6 +88,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITabBarDeleg
     if segue.identifier == "showDetail" {
       guard let newPlaceVC = segue.destination as? NewPlaceViewController else { return }
       guard let indexPath = tableView.indexPathForSelectedRow else { return }
+      tableView.deselectRow(at: indexPath, animated: true)
       newPlaceVC.currentPlace = places[indexPath.row]
     }
   }
